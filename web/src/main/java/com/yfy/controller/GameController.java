@@ -29,6 +29,7 @@ public class GameController {
         model.addAttribute(AttributeNames.MAIN_MESSAGE, gameService.getMainMessage());
         model.addAttribute(AttributeNames.RESULT_MESSAGE, gameService.getResultMessage());
         log.info("model = {}", model);
+        log.info("model.class = {}", model.getClass());
         return gameService.isGameOver() ? ViewNames.GAME_OVER : ViewNames.PLAY;
     }
 
