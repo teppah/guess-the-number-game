@@ -25,13 +25,15 @@
         <h1 class="display-3">The Number Game</h1>
     </div>
     <div class="col-lg-4 border border-primary" style="padding-top: 10px; padding-bottom:10px;">
-        <h3 th:text="${mainMessage}">Main Message placeholder</h3>
+        <h3 th:text="${__${T(com.yfy.util.AttributeNames).MAIN_MESSAGE}__}">
+            Main Message placeholder</h3>
         <hr/>
-        <h5 th:text="${resultMessage}">Result Message placeholder</h5>
+        <h5 th:text="${__${T(com.yfy.util.AttributeNames).RESULT_MESSAGE}__}">
+            Result Message placeholder</h5>
     </div>
 
 
-    <form action="play" method="post" class="col-sm-2" style="padding-top: 10px;">
+    <form th:action="@{__${T(com.yfy.util.GameMappings).PLAY}__}" action="play2" method="post" class="col-sm-2" style="padding-top: 10px;">
         <div class="form-group">
             <label for="guess">Enter your guess:</label>
             <input id="guess" class="form-control" type="number" name="guess"/>
