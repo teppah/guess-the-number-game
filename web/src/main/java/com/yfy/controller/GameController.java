@@ -41,7 +41,7 @@ public class GameController {
     }
 
     @GetMapping(GameMappings.RESET)
-    public String reset() {
+    public String restart() {
         gameService.reset();
         return GameMappings.REDIRECT_PLAY;
     }
