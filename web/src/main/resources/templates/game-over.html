@@ -22,10 +22,18 @@
         <h1 class="display-3">The Number Game</h1>
     </div>
     <div class="col-lg-3 border border-primary text-center" style="padding-top: 10px; padding-bottom:10px;">
-        <h1>Game Over</h1>
+        <h2>Game Over</h2>
         <h3 th:text="${__${T(com.yfy.util.AttributeNames).RESULT_MESSAGE}__}">
             Result Message placeholder</h3>
+        <a class="btn btn-primary" style="padding-top: 5px" th:href="@{__${T(com.yfy.util.GameMappings).RESET}__}">Play
+            again</a>
+        <a class="btn btn-secondary" style="padding-top: 5px"
+           th:href="@{__${T(com.yfy.util.GameMappings).HOME}__}">Home</a>
+
     </div>
 </div>
+<footer>
+    <p class="navbar fixed-bottom text-center">Copyright YFY 2018.</p>
+</footer>
 </body>
 </html>

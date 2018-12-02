@@ -39,4 +39,16 @@ public class GameController {
         gameService.checkGuess(guess);
         return GameMappings.REDIRECT_PLAY;
     }
+
+    @GetMapping(GameMappings.RESET)
+    public String reset() {
+        gameService.reset();
+        return GameMappings.REDIRECT_PLAY;
+    }
+
+    @GetMapping(GameMappings.HOME)
+    public String homeAfterGameOveR() {
+        gameService.reset();
+        return ViewNames.HOME;
+    }
 }
