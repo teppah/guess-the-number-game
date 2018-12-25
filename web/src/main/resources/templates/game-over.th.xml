@@ -1,0 +1,12 @@
+<thlogic>
+    <attr sel="#headId"
+          th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#result-message"
+          th:text="${__${T(com.yfy.util.AttributeNames).RESULT_MESSAGE}__}"/>
+    <attr sel="#reset-button"
+          th:href="@{__${T(com.yfy.util.GameMappings).RESET}__}"/>
+    <attr sel="#home-button"
+          th:href="@{__${T(com.yfy.util.GameMappings).HOME}__}"/>
+    <attr sel="#footerId"
+          th:replace="~{fragments/footer :: footerFragment}"/>
+</thlogic>

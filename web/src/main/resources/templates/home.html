@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-
-<head th:replace="~{fragments/head :: headFragment}">
+<html lang="en">
+<head id="headId">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>placeholder title</title>
@@ -28,11 +26,10 @@
         <h5 class="text-center">Probably full of bugs but oh well </h5>
         <hr class="col-sm-1">
     </div>
-    <a class="col-lg-4 btn btn-outline-primary btn-block " style="height: 110px; font-size: 60px; "
-       th:href="@{__${T(com.yfy.util.GameMappings).PLAY}__}"
-       th:text="Play" href="play.html">Click To Play</a>
+    <a id="play-button" class="col-lg-4 btn btn-outline-primary btn-block"
+       style="height: 110px; font-size: 60px;" >Click To Play</a>
 </div>
-<footer th:replace="~{fragments/footer :: footerFragment}">
+<footer id="footerId">
     <p class="fixed-bottom text-center">Copyright YFY 2018. PLACEHOLDER</p>
 </footer>
 </body>

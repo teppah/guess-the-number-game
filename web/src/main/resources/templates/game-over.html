@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-
-<head th:replace="~{fragments/head :: headFragment}">
+<html lang="en">
+<head id="headId">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>placeholder content</title>
+    <title>placeholder title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -25,16 +23,17 @@
     </div>
     <div class="col-lg-3 border border-primary text-center" style="padding-top: 10px; padding-bottom:10px;">
         <h2>Game Over</h2>
-        <h3 th:text="${__${T(com.yfy.util.AttributeNames).RESULT_MESSAGE}__}">
+        <hr/>
+        <h3 id="result-message">
             Result Message placeholder</h3>
-        <a class="btn btn-primary" style="padding-top: 5px" th:href="@{__${T(com.yfy.util.GameMappings).RESET}__}">Play
+        <a id="reset-button" class="btn btn-primary" style="padding-top: 5px">Play
             again</a>
-        <a class="btn btn-secondary" style="padding-top: 5px"
-           th:href="@{__${T(com.yfy.util.GameMappings).HOME}__}">Home</a>
+        <a id="home-button" class="btn btn-secondary" style="padding-top: 5px"
+           >Home</a>
 
     </div>
 </div>
-<footer th:replace="~{fragments/footer :: footerFragment}">
+<footer id="footerId">
     <p class="navbar fixed-bottom text-center">Copyright YFY 2018. PLACEHOLDER</p>
 </footer>
 </body>
