@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-
-
-<head th:replace="~{fragments/head :: headFragment}">
+<html lang="en">
+<head id="headId">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>placeholder title</title>
@@ -25,15 +22,15 @@
         <h1 class="display-3">The Number Game</h1>
     </div>
     <div class="col-lg-4 border border-primary" style="padding-top: 10px; padding-bottom:10px;">
-        <h3 th:text="${__${T(com.yfy.util.AttributeNames).MAIN_MESSAGE}__}">
+        <h3 id="main-message">
             Main Message placeholder</h3>
         <hr/>
-        <h5 th:text="${__${T(com.yfy.util.AttributeNames).RESULT_MESSAGE}__}">
+        <h5 id="result-message">
             Result Message placeholder</h5>
     </div>
 
 
-    <form th:action="@{__${T(com.yfy.util.GameMappings).PLAY}__}" action="play2" method="post" class="col-sm-2" style="padding-top: 10px;">
+    <form id="game-form" action="play2" method="post" class="col-sm-2" style="padding-top: 10px;">
         <div class="form-group">
             <label for="guess">Enter your guess:</label>
             <input id="guess" class="form-control" type="number" name="guess"/>
@@ -41,7 +38,7 @@
         <input type="submit" class="btn btn-primary" value="Submit"/>
     </form>
 
-    <footer th:replace="~{fragments/footer :: footerFragment}">
+    <footer id="footerId">
         <p class="navbar fixed-bottom text-center">Copyright YFY 2018. PLACEHOLDER</p>
     </footer>
 </div>
