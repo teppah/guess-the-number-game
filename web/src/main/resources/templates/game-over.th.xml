@@ -1,12 +1,18 @@
 <thlogic>
     <attr sel="#headId"
           th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#title"
+          th:text="#{game.title}"/>
+    <attr sel="#game-over"
+          th:text="#{game.over}"/>
     <attr sel="#result-message"
           th:text="${__${T(com.yfy.util.AttributeNames).RESULT_MESSAGE}__}"/>
     <attr sel="#reset-button"
-          th:href="@{__${T(com.yfy.util.GameMappings).RESET}__}"/>
+          th:href="@{__${T(com.yfy.util.GameMappings).RESET}__}"
+          th:text="#{game.playAgain}"/>
     <attr sel="#home-button"
-          th:href="@{__${T(com.yfy.util.GameMappings).HOME}__}"/>
+          th:href="@{__${T(com.yfy.util.GameMappings).HOME}__}"
+          th:text="#{game.home}"/>
     <attr sel="#footerId"
           th:replace="~{fragments/footer :: footerFragment}"/>
 </thlogic>
