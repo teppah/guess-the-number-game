@@ -2,6 +2,7 @@ package com.yfy;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContext;
@@ -29,8 +30,8 @@ public class MessageGeneratorImpl implements MessageGenerator {
 
 
     // == constructor ==
-//    @Autowired
-    public MessageGeneratorImpl(Game game, MessageSource source) {
+    @Autowired
+    public MessageGeneratorImpl(Game game, ApplicationContext source) {
         this.game = game;
         this.messageSource = source;
     }
@@ -73,6 +74,9 @@ public class MessageGeneratorImpl implements MessageGenerator {
 
     // == private methods ==
     private String getMessage(String code, Object... args) {
-        return messageSource.getMessage(code, args, LocaleContextHolder.getLocale());
+        log.info("generate message from the following: code = {}, args = {}", code, args);
+        String generated = messageSource.getMessage(code, args, LocaleContextHolder.getLocale());
+        log.info("generated = {}", generated);
+        return generated;
     }
 }
